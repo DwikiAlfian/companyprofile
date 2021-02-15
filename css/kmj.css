@@ -147,6 +147,7 @@ body{
     margin-top: 25px;
 }
 .container.container-special .container-list li{
+    cursor: default;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -218,7 +219,99 @@ body{
     margin: 0;
     margin-top: 75px;
     padding: 150px 50px;
-    background-image: linear-gradient(45deg, rgba(15,15,25), rgba(0,0,10));
+    background-image: linear-gradient(45deg, rgba(25,25,35), rgba(10,10,20));
+}
+.grid-card{
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 20px;
+    column-gap: 20px;
+    width: 100%;
+    padding-top: 50px;
+}
+#testimonial{
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+}
+.testimonial-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255,255,255);
+    text-align: center;
+    padding: 20px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    margin-top: 100px;
+    width: 100%;
+    cursor: default;
+}
+.testimonial-card p{
+    font-size: 18px;
+    text-shadow: none;
+    color: black;
+}
+.testimonial-card span{
+    position: absolute;
+    bottom: -20px;
+    color: rgba(255,255,255);
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: rgba(255,100,0);
+}
+.testimonial-card img{
+    position: absolute;
+    height: 125px;    
+    width: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+    top: -75px;
+}
+
+/* COVERAGE */
+#coverage{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding-left: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(-90deg, rgba(20,20,30), rgba(0,0,10));
+}
+#coverage h1.container-title{
+    position: absolute;
+    left: -100px;
+    text-align: left;
+    padding: 20px 100px 20px 20px;
+    font-size: 40px;
+    width: min-content;
+    transform: rotateZ(-90deg);
+    background-color: rgba(255,100,0);
+    text-transform: inherit;
+    cursor: default;
+}
+#coverage #listtest{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#coverage #listtest h1{
+    cursor: default;
+    font-size: 40px;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 100ms;
+}
+#coverage #listtest h1:hover{
+    background-color: rgba(255,255,255,.1);
 }
 
 /* IMAGE */
@@ -349,6 +442,7 @@ body{
 /* FOOTER */
 .footer-container{
     margin-top: 0px;
+    background-image: linear-gradient(0deg, rgba(20,20,30), rgba(0,0,10));
 }
 .footer-container span{
     display: block;
@@ -392,6 +486,11 @@ body{
     display: grid;
 }
 
+/* COPYRIGHT */
+#copyright{
+    cursor: not-allowed;
+}
+
 /* RESPONSIVE */
 @media(min-width: 500px){
     .footer{
@@ -406,6 +505,9 @@ body{
         flex-direction: column;
         align-items: center;
     }
+    #coverage #listtest h1{
+        font-size: 50px;
+    }
 }
 @media(min-width: 700px){
     .res-margin{
@@ -418,6 +520,11 @@ body{
     }
     .container p.container-tagline{
         font-size: 50px;
+    }
+    #coverage{
+        padding-left: 160px;
+        margin-left: 150px;
+        margin-right: 150px;
     }
 }
 @media(min-width: 850px){
@@ -433,13 +540,19 @@ body{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-image: linear-gradient(0deg, rgba(10,10,20), rgba(0,0,10));
+    }
+    #coverage{
+        margin-left: 225px;
+        margin-right: 225px;
+    }
+    #coverage #listtest h1{
+        font-size: 60px;
     }
 }
 @media(min-width: 1000px){
     .res-margin{
-        margin-left: unset;
-        margin-right: unset;
+        margin-left: inherit;
+        margin-right: inherit;
     }
     .footer{
         width: 900px;
@@ -463,6 +576,17 @@ body{
         margin-right: 0;
         width: 700px;
     }
+    .grid-card{
+        grid-template-columns: 49% auto;
+    }
+    #testimonial{
+        margin: 20px;
+    }
+    #coverage{
+        padding-left: 180px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
 }
 @media(min-width: 1300px){
     .footer{
@@ -471,6 +595,17 @@ body{
     .res-margin{
         margin-left: 50px;
         margin-right: 50px;
+    }
+    #testimonial{
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .grid-card{
+        grid-template-columns: 32.5% auto 32.5%;
+    }
+    #coverage{
+        margin-left: 75px;
+        margin-right: 75px;
     }
 }
 @media(min-width: 1500px){
