@@ -194,6 +194,7 @@ body{
     margin-right: 25%;
     margin-top: 30px;
     margin-bottom: 30px;
+    font-weight: 800;
 }
 .container.container-special.container-special-2{
     align-items: flex-start;
@@ -343,7 +344,7 @@ body{
 
 /* FOOTER */
 .footer-container{
-    margin-top: 150px;
+    margin-top: 0px;
 }
 .footer-container span{
     display: block;
