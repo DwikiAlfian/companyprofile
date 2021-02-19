@@ -205,6 +205,7 @@ body{
     margin-top: 30px;
     margin-bottom: 30px;
     font-weight: 800;
+    text-align: left;
 }
 .container.container-special.container-special-2{
     align-items: flex-start;
